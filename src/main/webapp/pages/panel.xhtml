@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="/template/templatePanel.xhtml">
+
+	<!-- Content -->
+	<ui:define name="content">
+
+
+
+		<body class="bg-active">
+			<div class="bg-active"
+				>
+				<div class="row" >
+					<div class="col-sm" style="margin-top:0px; padding: 0px;height:574px;width:auto">
+
+						<div class="bg-active ">
+							<p class="font-weight-bold text-center light" style="font-size: 50px;margin-top:200px"> Queuing
+				Control System</p>
+						</div>
+
+					</div>
+
+					<div class="col-sm-5 bg-light">
+
+						<div class="text-center">
+							
+							<p:panel>
+								
+			<h:form id="formList">
+				<p:panel id="pnList">
+					<p:dataTable id="tb_call" var="calls" rowIndexVar="item"
+						emptyMessage="Sem dados na tabela." value="#{callMB.list_call}"
+						rows="5"
+						sortBy="#{calls.sector}" expandableRowGroups="true">
+
+						<f:facet name="header">Call List</f:facet>
+
+						<p:column headerText="Number" width="90">
+							<h:outputText value="#{calls.number}" />
+						</p:column>
+
+						<p:column headerText="Sector">
+							<h:outputText value="#{calls.sector}" />
+						</p:column>
+
+						<p:column headerText="Service" width="120">
+							<h:outputText value="#{calls.service}" />
+						</p:column>
+						
+						<p:column headerText="Hour">
+							<h:outputText value="#{calls.hour}" />
+						</p:column>
+
+					
+						
+					</p:dataTable>
+				</p:panel>
+
+			</h:form>
+							</p:panel>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row bg-white">
+					<div class="col-sm bg-alert">
+						<div class="text-center"
+							style="padding: 0px; margin: 0px">
+							<p class="font-weight-light">
+								<a href="http://github.com/sergiosalomao">Developer Sergio
+								Salomao</a>
+							</p>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</body>
+		
+
+
+
+	</ui:define>
+
+</ui:composition>

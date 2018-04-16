@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Queuing control system</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- define o arquivo JS -->
+	<h:outputScript library="js" name="script.js" target="head" />
+
+	<!-- define o arquivo CSS -->
+	<link rel="stylesheet" href="resources/Leafs/css/leaf-all-1.0.css" type="text/css"/>
+	<h:outputStylesheet name="Leafs/css/leaf-all-1.0.css"/>
+	
+</h:head>
+
+<!-- Template -->
+<!-- Menu Principal -->
+	
+<h:body>
+	<h:form id="mainContent" >
+		
+						
+		<ui:insert name="content" />
+		<ui:insert name="footer" />
+	</h:form>
+</h:body>
+</html>
